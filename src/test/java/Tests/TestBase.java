@@ -7,6 +7,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
@@ -23,6 +24,9 @@ public class TestBase extends AbstractTestNGCucumberTests {
         }
         else if(BrowserName.equals("FireFox")){
             driver = new FirefoxDriver();
+        }
+        else if(BrowserName.equals("HeadlessCromeBrowser")){
+            driver = new();
         }
         driver.get("https://demo.nopcommerce.com/");
     }
