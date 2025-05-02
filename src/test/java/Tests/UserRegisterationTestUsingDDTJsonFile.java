@@ -1,0 +1,59 @@
+package Tests;
+
+import Data.ExcelReader;
+import Data.JsonReader;
+import Data.UserDataClass;
+import Pages.HomePage;
+import Pages.LoginPage;
+import Pages.UserRegisterationPage;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import java.io.IOException;
+
+public class UserRegisterationTestUsingDDTJsonFile extends TestBase{
+    public HomePage homePageObject;
+    public UserRegisterationPage UserRegisterationPageObject;
+    public LoginPage LoginPageObject;
+    @DataProvider(name = "TestData")
+    public static Object[][] userData() throws IOException {
+        return JsonReader.getJsonData();
+    }
+    @Test(priority = 1,dataProvider = "TestData")
+    public void UserRegisterationSucessfully(UserDataClass user){
+     /*   homePageObject = new HomePage(driver);
+        homePageObject.OpenRegisterationLink();
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("gender-male")));
+
+
+     UserRegisterationPageObject = new UserRegisterationPage(driver);
+        UserRegisterationPageObject.userRegisteration(
+                fName,
+                lName,
+                email,
+                password,
+                cPassword
+        );
+        driver.navigate().to("https://demo.nopcommerce.com/");*/
+        System.out.println(user.firstName + user.lastName + user.email + user.password);
+    }
+    /*@Test(priority = 2,dependsOnMethods = "UserRegisterationSucessfully")
+    public void RegisterUserCanLogout(){
+        UserRegisterationPageObject.logout();
+    }
+    @Test(priority = 3,dependsOnMethods = "RegisterUserCanLogout")
+    public void login(){
+        homePageObject.OpenLoginPage();
+        LoginPageObject = new LoginPage(driver);
+        LoginPageObject.userLogin("Email@gmail.com","register?returnUrl=%2F");
+    }
+    @AfterMethod
+    public void takeScreenShot(ITestResult It) throws IOException {
+        if(It.getStatus() == ITestResult.FAILURE){
+            System.out.println("Failed");
+            Helper.captureScreenShot(driver,"UserRegisteration");
+        }
+    }*/
+}

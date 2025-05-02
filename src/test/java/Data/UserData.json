@@ -1,0 +1,23 @@
+[
+  {
+    "firstName": "Hossam",
+    "lastName": "Hussein",
+    "email": "hossam111@gmail.com",
+    "password": "Password@123456",
+    "confirmPassword": "Password@123456"
+  },
+  {
+    "firstName": "Sara",
+    "lastName": "Ali",
+    "email": "sara.ali@gmail.com",
+    "password": "Pass@7890",
+    "confirmPassword": "Pass@7890"
+  },
+  {
+    "firstName": "Hosna",
+    "lastName": "Mahmoud",
+    "email": "Hosna.Mahmoud@gmail.com",
+    "password": "Pass@203010",
+    "confirmPassword": "Pass@203010"
+  }
+]
