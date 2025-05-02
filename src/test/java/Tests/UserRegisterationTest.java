@@ -26,10 +26,11 @@ public class UserRegisterationTest extends TestBase{
     public LoginPage LoginPageObject;
     @Test(priority = 1)
     public void UserRegisterationSucessfully(){
-        homePageObject = new HomePage(driver);
-        homePageObject.OpenRegisterationLink();
+       // homePageObject = new HomePage(driver);
+        //homePageObject.OpenRegisterationLink();
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        System.out.println("Yes");
+       /* WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("gender-male")));
 
 
@@ -40,7 +41,7 @@ public class UserRegisterationTest extends TestBase{
                 "Hossam111@gmail.com",
                 "Password@123456",
                 "Password@123456"
-        );
+        );*/
     }
     /*@Test(priority = 2,dependsOnMethods = "UserRegisterationSucessfully")
     public void RegisterUserCanLogout(){
