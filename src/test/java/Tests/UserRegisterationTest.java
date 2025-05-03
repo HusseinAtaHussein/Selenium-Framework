@@ -24,7 +24,7 @@ public class UserRegisterationTest extends TestBase{
     public HomePage homePageObject;
     public UserRegisterationPage UserRegisterationPageObject;
     public LoginPage LoginPageObject;
-    @Test(priority = 1)
+    @Test(priority = 1, groups = {"Pregression"})
     public void UserRegisterationSucessfully(){
  /*       homePageObject = new HomePage(driver);
         homePageObject.OpenRegisterationLink();
